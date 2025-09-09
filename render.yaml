@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: ai-video-scene-detector
+    env: python
+    region: oregon   # or change to your nearest region
+    buildCommand: |
+      apt-get update && apt-get install -y ffmpeg
+      pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    plan: free  # upgrade to starter/standard for better performance
+    autoDeploy: true
