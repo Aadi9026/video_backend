@@ -1,0 +1,11 @@
+# requirements.txt
+
+fastapi==0.110.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9
+transformers==4.41.0
+torch==2.2.2
+openai-whisper==20231117
+decord==0.6.0
+opencv-python-headless==4.9.0.80
+numpy==1.26.4
